@@ -1,0 +1,139 @@
+@import url("css/style1.css");
+@import url("css/style2.css");
+@import url("css/style3.css");
+.container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100px 200px 550px 850px 1fr;
+    grid-template-areas: "navbar" "title" "bio" "blogs" "footer";
+}
+
+html {
+    background-image: url("images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.nav {
+    grid-area: navbar;
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a:link {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: rgb(246, 249, 255);
+}
+
+a:visited {
+    color: black;
+}
+
+.bio {
+    grid-area: bio;
+    padding: 10px;
+}
+
+.main {
+    grid-area: blogs;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    overflow-y: scroll;
+}
+
+#blogone {
+    border: 1px solid black;
+    background-image: url("images/beach.jpg");
+}
+
+#blogtwo {
+    border: 1px solid black;
+    background-image: url("images/city.jpg");
+}
+
+#blogthree {
+    border: 1px solid black;
+    background-image: url("images/boat.jpg");
+}
+
+button {
+    border-radius: 8px;
+    font-size: 12px;
+    background-color: cornflowerblue;
+    opacity: 80%;
+}
+
+figure {
+    border: thin #c0c0c0 solid;
+    display: flex;
+    flex-flow: column;
+    padding: 5px;
+    max-width: 220px;
+    margin: auto;
+}
+
+img {
+    max-width: 220px;
+    max-height: 150px;
+}
+
+figcaption {
+    background-color: #222;
+    color: #fff;
+    font: italic smaller sans-serif;
+    padding: 3px;
+    text-align: center;
+}
+
+#readlink {
+    color: white;
+    font-size: large;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+img {
+    height: 100px;
+    width: 100px;
+}
+
+footer {
+    grid-area: footer;
+}
+
+#footertext {
+    text-align: center;
+    color: thistle;
+}
+
+h2 {
+    color: white;
+}
+
+h3 {
+    color: white;
+    font-style: italic;
+}
+
+p {
+    text-indent: 25px;
+    padding: 15px;
+    color: white;
+}
+
+@media (min-width:1025px) {
+    .container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 60px 100px 500px 60px;
+        grid-template-areas: "navbar navbar" "title title" "bio blogs" "footer footer";
+    }
+}
